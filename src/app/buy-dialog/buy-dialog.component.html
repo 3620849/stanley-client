@@ -1,0 +1,10 @@
+<p>Status:{{data.status}}</p>
+<p>id:{{data.id}}</p>
+<p>message:{{data.message}}</p>
+
+<div *ngIf="loading" style="width: 100%;">
+    <mat-spinner style="margin: 0 auto;"></mat-spinner>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="close()">Close</button>
+  </div>
