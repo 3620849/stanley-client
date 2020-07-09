@@ -6,8 +6,8 @@
       </button>
       <span>Stanley Book service</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon"  (click)="openDialog()">
-        <mat-icon>add_circle</mat-icon>
+      <button mat-raised-button   class="example-icon favorite-icon"  (click)="openDialog()">
+        <mat-icon>add_circle</mat-icon>ADD BOOK 
       </button>
     </mat-toolbar>
   </p>
@@ -17,10 +17,8 @@
   <mat-form-field class="example-form-field">
     <mat-label>Search book by name</mat-label>
     <input matInput type="text" [(ngModel)]="value">
-    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="search()">
-      <mat-icon>search</mat-icon>
-    </button>
   </mat-form-field>
+  <button mat-mini-fab color="primary" (click)="search()"><mat-icon>search</mat-icon></button>
 </div>
 <div class="content-container" *ngIf="!loading">
   <table style="width: 99%;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
